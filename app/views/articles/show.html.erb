@@ -1,0 +1,8 @@
+<h1>Title: <%= @article.title %></h1>
+
+<h2>Content: <%= @article.content %></h2>
+
+<h3> Article Identification Number: <%= @article.id %></h3>
+
+<%= link_to "Go back to Articles", articles_path %>
+<%= link_to "Delete Article", article_path(@article), method: :delete %>

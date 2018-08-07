@@ -7,6 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
-10.times do
-  Article.create(title: Faker::Military.army_rank, content: Faker::Community.quotes)
+100.times do
+  Article.create(title: (Faker::Military.army_rank + " " + Faker::Artist.name), content: Faker::Community.quotes)
 end

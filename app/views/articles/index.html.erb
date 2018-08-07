@@ -1,0 +1,22 @@
+<h1>Blog Articles</h1>
+
+
+<%= link_to "create a new article",new_article_path %>
+
+<div>
+
+  <ol>
+
+
+    <% @articles.each do |article| %>
+    <li>
+      <h2><%= article.title %></h2>
+      <p><%= article.content %></p>
+      <%= link_to "Read more here...", article_path(article) %>
+      <%= link_to "Edit this Article", edit_article_path(article) %>
+      <%= link_to "Delete this Article", article_path(article), method: :delete %>
+    </li>
+    <% end %>
+  </ol>
+
+</div>
